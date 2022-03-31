@@ -1,0 +1,13 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: classroom-service
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2008Dialect
+    show-sql: true
+  datasource:
+    url: jdbc:sqlserver://sqlsrv\\sqlexpress;databaseName=customer
+    username: ${db.username}
+    password: ${db.password}
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
