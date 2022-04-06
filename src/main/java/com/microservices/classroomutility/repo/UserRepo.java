@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
+import java.util.Random;
 
 @Repository
 public interface UserRepo extends JpaRepository<User, Long> {
@@ -23,5 +24,7 @@ public interface UserRepo extends JpaRepository<User, Long> {
     @Query(value = DBQuery.loginUserQuery, nativeQuery = true)
     DBUserInterface loginUser(String email);
 
+    @Query(value = DBQuery.updatePasswordQuery, nativeQuery = true)
+    int updatePassword(String password, String email);
 
 }

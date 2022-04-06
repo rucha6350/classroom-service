@@ -1,7 +1,7 @@
 server:
   port: 8087
   servlet:
-    context-path: /classroom # mdmdata
+    context-path: /classroomutility # mdmdata
 
 spring:
   main:
@@ -21,3 +21,14 @@ spring:
       idle-timeout: 30000
       max-lifetime: 10000
       maximum-pool-size: 100
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: rucha2498@gmail.com
+    password: DemoProject@2498
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
